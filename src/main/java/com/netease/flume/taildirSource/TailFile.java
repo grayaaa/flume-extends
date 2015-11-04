@@ -128,7 +128,7 @@ public class TailFile {
       return null;
     }
     if (backoffWithoutNL && !line.endsWith(LINE_SEP)) {
-      logger.info(
+      logger.debug(
           "Backing off in file without newline: " + path + ", inode: " + inode + ", pos: " + raf.getFilePointer());
       raf.seek(posTmp);
       return null;
